@@ -1,0 +1,25 @@
+header {
+    height: 25vh;
+    background-color: antiquewhite;
+}
+
+main {
+    height: 65vh;
+    background-color: aqua;
+}
+
+footer {
+    height: 10vh;
+    background-color: antiquewhite;
+}
+
+.horizontal-nav {
+    height: 7.5em;
+    margin: 0 30px;
+}
+
+.nav-content{
+    text-decoration: none;
+    color: black;
+    font-size: 4em;
+}
