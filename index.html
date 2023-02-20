@@ -14,10 +14,10 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="./assets/LogoAmazingEvents.png" alt="Bootstrap" width="250"
-                        height="90"></a>
+        <nav class="navbar navbar-expand-lg bg-danger-subtle">
+            <div class="container-fluid justify-content-center flex-column flex-md-row justify-content-md-between">
+                <a class="navbar-brand" href="#"><img src="./assets/LogoAmazingEvents.png" alt="Bootstrap"
+                        width="280"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -25,7 +25,7 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active btn m-1" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active btn m-1 mt-3 mt-md-1" aria-current="page" href="#">Home</a>
                         <a class="nav-link btn btn-outline-secondary m-1" href="./upcoming_events.html">Upcoming
                             Events</a>
                         <a class="nav-link btn btn-outline-secondary m-1" href="./past_events.html">Past Events</a>
@@ -36,18 +36,85 @@
             </div>
         </nav>
         <div class="horizontal-nav d-flex justify-content-between align-items-center">
-            <a class="nav-content" href="">&#x003c;</a>
-            <h1 class="nav-content">Home</h1>
-            <a class="nav-content" href="">&#x003e;</a>
+            <a class="nav-content" href="" style="color: rgba(125, 125, 125, 0.5);">&#x003c;</a>
+            <h1 class="nav-content text-center">Home</h1>
+            <a class="nav-content" href="./upcoming_events.html">&#x003e;</a>
         </div>
     </header>
 
     <main>
-
+        <div class="d-flex flex-column-reverse align-items-center flex-md-row justify-content-between py-5 px-lg-3 px-xl-4 px-xxl-5">
+            <div class="text-center text-lg-start">
+                <label class="me-2 me-md-5" for="check1"><input type="checkbox" id="check1">
+                    Category</label>
+                <label class="me-2 me-md-5" for="check2"><input type="checkbox" id="check2">
+                    Category</label>
+                <label class="me-2 me-md-5" for="check3"><input type="checkbox" id="check3">
+                    Category</label>
+                <label class="me-2 me-md-5" for="check4"><input type="checkbox" id="check4">
+                    Category</label>
+                <label class="me-2 me-md-5" for="check5"><input type="checkbox" id="check5">
+                    Category</label>
+            </div>
+            <div>
+                <form class="d-inline-flex mb-3" role="search">
+                    <input class="form-control me-2 search-input" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg></button>
+                </form>
+            </div>
+        </div>
+        <div class="cards d-flex align-items-center justify-content-evenly flex-wrap gap-3 text-center pb-3">
+            <div>
+                <img src="./assets/Cinema.jpg" alt="Cinema.">
+                <p class="h3 mt-2">Title</p>
+                <p class="h5">Descriptive title</p>
+                <div class="d-flex justify-content-around align-items-center mt-3">
+                    <p class="m-0">Price: $000</p>
+                    <a href="./details.html" class="btn btn-outline-secondary btn-shadow">Details</a>
+                </div>
+            </div>
+            <div>
+                <img src="./assets/Costume_Party.jpg" alt="Costume party.">
+                <p class="h3 mt-2">Title</p>
+                <p class="h5">Descriptive title</p>
+                <div class="d-flex justify-content-around align-items-center mt-3">
+                    <p class="m-0">Price: $000</p>
+                    <a href="./details.html" class="btn btn-outline-secondary btn-shadow">Details</a>
+                </div>
+            </div>
+            <div>
+                <img src="./assets/Food_Fair.jpg" alt="Food fair.">
+                <p class="h3 mt-2">Title</p>
+                <p class="h5">Descriptive title</p>
+                <div class="d-flex justify-content-around align-items-center mt-3">
+                    <p class="m-0">Price: $000</p>
+                    <a href="./details.html" class="btn btn-outline-secondary btn-shadow">Details</a>
+                </div>
+            </div>
+            <div><img src="./assets/Marathon.jpg" alt="Marathon.">
+                <p class="h3 mt-2">Title</p>
+                <p class="h5">Descriptive title</p>
+                <div class="d-flex justify-content-around align-items-center mt-3">
+                    <p class="m-0">Price: $000</p>
+                    <a href="./details.html" class="btn btn-outline-secondary btn-shadow">Details</a>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer>
-
+    <footer class="d-flex flex-column flex-md-row align-items-center justify-content-between p-3">
+        <div>
+            <a href="#" class="p-2 ps-0"><img src="./assets/Insta.png" alt="Instagram"></a>
+            <a href="#" class="p-2"><img src="./assets/Facebook.png" alt="Facebook"></a>
+            <a href="#" class="p-2"><img src="./assets/Whatsapp.png" alt="Whatsapp"></a>
+        </div>
+        <div>
+            <p class="h4 mt-3 mb-0 mt-md-0">Cohort FE12-TT &copy;</p>
+        </div>
     </footer>
 
 

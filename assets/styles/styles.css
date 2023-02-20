@@ -1,25 +1,167 @@
 header {
-    height: 25vh;
-    background-color: antiquewhite;
+    min-height: 25vh;
+    background-color: rgb(255, 226, 187);
 }
 
 main {
-    height: 65vh;
-    background-color: aqua;
+    min-height: 65vh;
+    background-image: linear-gradient(to right, rgb(167, 96, 3), rgb(219, 171, 108), rgb(167, 96, 3));
 }
 
 footer {
-    height: 10vh;
-    background-color: antiquewhite;
+    min-height: 10vh;
+    background-color: rgb(255, 226, 187);
+}
+
+.navbar-nav a {
+    padding: 8px;
 }
 
 .horizontal-nav {
-    height: 7.5em;
+    height: 8.9em;
     margin: 0 30px;
 }
 
 .nav-content{
     text-decoration: none;
     color: black;
-    font-size: 4em;
+    font-size: 2.5em;
+}
+
+footer img {
+    width: 3em;
+}
+
+input,label:hover {
+    cursor: pointer;
+}
+
+.search-input {
+    width: 12em !important;
+}   
+
+.cards>div {
+    width: 290px;
+    height: 330px;
+    background-color: rgb(255, 230, 197);
+}
+
+.cards img {
+    width: 90%;
+    height: 50%;
+    object-fit: cover;
+    box-shadow: -7px -7px 5px black;
+    margin-top: 14px;
+    outline: 1px solid black;
+}
+
+.btn-shadow {
+    box-shadow: -2px -2px 5px black;
+}
+
+
+.contact label {
+    margin: 3px !important;
+}
+
+.contact input {
+    margin-bottom: 1em;
+}
+
+.contact button {
+    border: 1px solid black;
+    border-radius: .2em;
+    padding: .3em 1em;
+    font-weight: 500;
+}
+
+.contact button:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+}
+
+table, th, td {
+    border: 1px solid black !important;
+}
+
+th {
+    font-size: 1.3em;
+    font-weight: 500;
+    padding: .5em;
+    background-color: rgb(206, 143, 60);
+}
+
+td {
+    padding: 0 .5em;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.details {
+    background-color: rgb(165, 109, 35);
+    width: 95%;
+    height: 95%;
+    border: 2px solid black;
+}
+
+.detail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail-div-img {
+    height: 200px;
+}
+
+@media screen and (min-width: 576px) {    
+    .nav-content {
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width: 768px) {    
+    .search-input {
+        width: 17em !important;
+    }
+
+    .nav-content {
+        font-size: 4em;
+    }
+
+    .details {
+        width: 75%;
+        height: 75%;
+    }    
+
+    .detail-text {
+        border: 2px black;
+        border-left-style: dashed;
+    }
+
+    .detail-div-img, .detail-text {
+        width: 50%;
+        height: 100%;
+    }
+
+    .detail-div-img {
+        height: 225px;
+    }    
+}
+
+@media screen and (min-width: 1200px) {    
+    .search-input {
+        width: 23.3em !important;
+    }
+
+    .detail-div-img, .detail-text {
+        padding: 2em;
+        height: 100%;
+    }
+
+    .contact {
+        padding: 2em 20em;
+    }    
 }
