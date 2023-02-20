@@ -1,16 +1,16 @@
 header {
     height: 25vh;
-    background-color: antiquewhite;
+    background-color: rgb(255, 226, 187);
 }
 
 main {
     height: 65vh;
-    background-color: aqua;
+    background-image: linear-gradient(to right, rgb(167, 96, 3), rgb(219, 171, 108), rgb(167, 96, 3));
 }
 
 footer {
     height: 10vh;
-    background-color: antiquewhite;
+    background-color: rgb(255, 226, 187);
 }
 
 .horizontal-nav {
@@ -39,7 +39,7 @@ input,label:hover {
 .cards>div {
     width: 290px;
     height: 330px;
-    background-color: azure;
+    background-color: rgb(255, 230, 197);
 }
 
 .cards img {
@@ -87,7 +87,7 @@ th {
     font-size: 1.3em;
     font-weight: 500;
     padding: .5em;
-    background-color: rgb(2, 197, 197);
+    background-color: rgb(206, 143, 60);
 }
 
 td {
@@ -99,7 +99,7 @@ td {
 }
 
 .details {
-    background-color: blueviolet;
+    background-color: rgb(165, 109, 35);
     width: 75%;
     height: 75%;
     border: 2px dashed black;
