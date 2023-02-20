@@ -17,7 +17,7 @@
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./index.html"><img src="./assets/LogoAmazingEvents.png" alt="Bootstrap"
-                        width="250" height="90"></a>
+                        width="280"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -35,14 +35,42 @@
                 </div>
             </div>
         </nav>
+        <div class="horizontal-nav d-flex justify-content-between align-items-center">
+            <a class="nav-content" href="./past_events.html">&#x003c;</a>
+            <h1 class="nav-content">Contact Us</h1>
+            <a class="nav-content" href="./stats.html">&#x003e;</a>
+        </div>
     </header>
 
     <main>
-
+        <section>
+                <form class="contact" action="">
+                    <div class="container">
+                        <label for="exampleFormControlInput1" class="form-label">Name:</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1">
+                        <label for="exampleFormControlInput1" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                      </div>
+                      <div class="container">
+                        <label for="exampleFormControlTextarea1" class="form-label">Message:</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+                      </div>
+                      <div class="d-flex justify-content-end">
+                          <button class="m-3" type="submit">Submit</button>
+                        </div>
+                </form>
+        </section>
     </main>
 
-    <footer>
-
+    <footer class="d-flex align-items-center justify-content-between px-5">
+        <div>
+            <a href="#" class="p-2 ps-0"><img src="./assets/Insta.png" alt="Instagram"></a>
+            <a href="#" class="p-2"><img src="./assets/Facebook.png" alt="Facebook"></a>
+            <a href="#" class="p-2"><img src="./assets/Whatsapp.png" alt="Whatsapp"></a>
+        </div>
+        <div>
+            <p class="h4 m-0">Cohort FE12-TT &copy;</p>
+        </div>
     </footer>
 
 

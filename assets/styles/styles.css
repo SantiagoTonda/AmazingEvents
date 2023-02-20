@@ -14,7 +14,7 @@ footer {
 }
 
 .horizontal-nav {
-    height: 7.5em;
+    height: 8.9em;
     margin: 0 30px;
 }
 
@@ -22,4 +22,102 @@ footer {
     text-decoration: none;
     color: black;
     font-size: 4em;
+}
+
+footer img {
+    width: 3em;
+}
+
+input,label:hover {
+    cursor: pointer;
+}
+
+.px-10 {
+    padding: 0 9em;
+}
+
+.cards>div {
+    width: 290px;
+    height: 330px;
+    background-color: azure;
+}
+
+.cards img {
+    width: 90%;
+    height: 50%;
+    object-fit: cover;
+    box-shadow: -7px -7px 5px black;
+    margin-top: 14px;
+    outline: 1px solid black;
+}
+
+.btn-shadow {
+    box-shadow: -2px -2px 5px black;
+}
+
+.contact {
+    padding: 2em 20em;
+}
+
+.contact label {
+    margin: 3px !important;
+}
+
+.contact input {
+    margin-bottom: 1em;
+}
+
+.contact button {
+    border: 1px solid black;
+    border-radius: .2em;
+    padding: .3em 1em;
+    font-weight: 500;
+}
+
+.contact button:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+}
+
+table, th, td {
+    border: 1px solid black !important;
+}
+
+th {
+    font-size: 1.3em;
+    font-weight: 500;
+    padding: .5em;
+    background-color: rgb(2, 197, 197);
+}
+
+td {
+    padding: 0 .5em;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.details {
+    background-color: blueviolet;
+    width: 75%;
+    height: 75%;
+    border: 2px dashed black;
+    border-radius: 1em;
+}
+
+.detail-div-img, .detail-text {
+    width: 50%;
+    padding: 2em;
+}
+
+.detail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail-text {
+    border: 2px black;
+    border-left-style: dashed;
 }
