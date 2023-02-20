@@ -1,16 +1,20 @@
 header {
-    height: 25vh;
+    min-height: 25vh;
     background-color: rgb(255, 226, 187);
 }
 
 main {
-    height: 65vh;
+    min-height: 65vh;
     background-image: linear-gradient(to right, rgb(167, 96, 3), rgb(219, 171, 108), rgb(167, 96, 3));
 }
 
 footer {
-    height: 10vh;
+    min-height: 10vh;
     background-color: rgb(255, 226, 187);
+}
+
+.navbar-nav a {
+    padding: 8px;
 }
 
 .horizontal-nav {
@@ -21,7 +25,7 @@ footer {
 .nav-content{
     text-decoration: none;
     color: black;
-    font-size: 4em;
+    font-size: 2.5em;
 }
 
 footer img {
@@ -32,9 +36,9 @@ input,label:hover {
     cursor: pointer;
 }
 
-.px-10 {
-    padding: 0 9em;
-}
+.search-input {
+    width: 12em !important;
+}   
 
 .cards>div {
     width: 290px;
@@ -55,9 +59,6 @@ input,label:hover {
     box-shadow: -2px -2px 5px black;
 }
 
-.contact {
-    padding: 2em 20em;
-}
 
 .contact label {
     margin: 3px !important;
@@ -100,15 +101,9 @@ td {
 
 .details {
     background-color: rgb(165, 109, 35);
-    width: 75%;
-    height: 75%;
-    border: 2px dashed black;
-    border-radius: 1em;
-}
-
-.detail-div-img, .detail-text {
-    width: 50%;
-    padding: 2em;
+    width: 95%;
+    height: 95%;
+    border: 2px solid black;
 }
 
 .detail-img {
@@ -117,7 +112,56 @@ td {
     object-fit: cover;
 }
 
-.detail-text {
-    border: 2px black;
-    border-left-style: dashed;
+.detail-div-img {
+    height: 200px;
+}
+
+@media screen and (min-width: 576px) {    
+    .nav-content {
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width: 768px) {    
+    .search-input {
+        width: 17em !important;
+    }
+
+    .nav-content {
+        font-size: 4em;
+    }
+
+    .details {
+        width: 75%;
+        height: 75%;
+    }    
+
+    .detail-text {
+        border: 2px black;
+        border-left-style: dashed;
+    }
+
+    .detail-div-img, .detail-text {
+        width: 50%;
+        height: 100%;
+    }
+
+    .detail-div-img {
+        height: 225px;
+    }    
+}
+
+@media screen and (min-width: 1200px) {    
+    .search-input {
+        width: 23.3em !important;
+    }
+
+    .detail-div-img, .detail-text {
+        padding: 2em;
+        height: 100%;
+    }
+
+    .contact {
+        padding: 2em 20em;
+    }    
 }
