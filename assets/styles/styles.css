@@ -1,16 +1,16 @@
 header {
     min-height: 25vh;
-    background-color: rgb(255, 226, 187);
+    background-color: rgb(255, 187, 187);
 }
 
 main {
     min-height: 65vh;
-    background-image: linear-gradient(to right, rgb(167, 96, 3), rgb(219, 171, 108), rgb(167, 96, 3));
+    background-image: linear-gradient(to right, #d63e46, #f16c79, #d63e46);
 }
 
 footer {
     min-height: 10vh;
-    background-color: rgb(255, 226, 187);
+    background-color: rgb(255, 187, 187);
 }
 
 .navbar-nav a {
@@ -43,14 +43,15 @@ input,label:hover {
 .cards>div {
     width: 290px;
     height: 330px;
-    background-color: rgb(255, 230, 197);
+    background-color: rgb(248, 215, 218);
 }
 
 .cards img {
     width: 90%;
     height: 50%;
     object-fit: cover;
-    box-shadow: -7px -7px 5px black;
+    /* box-shadow: -7px -7px 5px black; */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     margin-top: 14px;
     outline: 1px solid black;
 }
@@ -88,7 +89,7 @@ th {
     font-size: 1.3em;
     font-weight: 500;
     padding: .5em;
-    background-color: rgb(206, 143, 60);
+    background-color: #d63e46;
 }
 
 td {
@@ -100,7 +101,7 @@ td {
 }
 
 .details {
-    background-color: rgb(165, 109, 35);
+    background-color: rgb(255, 187, 187);
     width: 95%;
     height: 95%;
     border: 2px solid black;
