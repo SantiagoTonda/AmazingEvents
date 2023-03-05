@@ -16,29 +16,6 @@ function showCards() {
 
     allEvents.push(card);
   }
-  cardEvents.innerHTML = allEvents.join(" ");
+  cardEvents.innerHTML = allEvents.join("");
 }
 showCards();
-
-
-
-
-
-
-
-
-
-
-/* let = pastEvents = [];
-let = upcomingEvents = [];
-
-for(let element of data.events) {
-  if(element.date < data.currentDate) {
-    pastEvents.push(element)
-  } else {
-    upcomingEvents.push(element)
-  }
-}
-
-console.log(upcomingEvents);
-console.log(pastEvents); */
