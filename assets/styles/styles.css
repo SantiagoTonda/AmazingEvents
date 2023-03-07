@@ -1,3 +1,7 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 header {
     min-height: 25vh;
     background-color: rgb(255, 187, 187);
@@ -42,7 +46,7 @@ input,label:hover {
 
 .cards>div {
     width: 290px;
-    height: 330px;
+    height: 400px;
     background-color: rgb(248, 215, 218);
 }
 
@@ -50,8 +54,7 @@ input,label:hover {
     width: 90%;
     height: 50%;
     object-fit: cover;
-    /* box-shadow: -7px -7px 5px black; */
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 20px, rgba(0, 0, 0, 0.22) 0px 8px 6px;
     margin-top: 14px;
     outline: 1px solid black;
 }
