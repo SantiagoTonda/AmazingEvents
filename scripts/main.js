@@ -15,4 +15,18 @@ function showCards() {
 }
 showCards();
 
-console.log(document);
+function showCategories() {
+  let arrayCategories = []
+  for (let element of data.events) {
+    if (!arrayCategories.includes(element.category)) {
+      arrayCategories.push(element.category)
+    }
+  }
+
+  let category = "";
+  for (let element of arrayCategories) {
+    category += `<label class="me-2 me-md-5" for="${element}"><input type="checkbox" id="${element}">${element}</label>`
+  }
+  document.getElementById('categories').innerHTML = category;
+}
+showCategories();
