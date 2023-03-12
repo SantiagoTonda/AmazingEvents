@@ -4,7 +4,7 @@ function captureData() {
   let filteredArray = data.events.filter(evento => {
     return evento.name.toLowerCase().includes(text.toLowerCase()) && (checks.includes(evento.category) || checks.length == 0) && evento.date < data.currentDate;
   })
-  printCards(filteredArray, "pastEvents");
+  printCards(filteredArray, "past_events");
 }
 
 captureData();
