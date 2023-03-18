@@ -1,3 +1,5 @@
+//Hacer que las cards se expandan cuando la descripción es muy larga
+
 function printCards(filteredArray, id) {
     if (filteredArray.length == 0) {
         document.getElementById(id).innerHTML = 
