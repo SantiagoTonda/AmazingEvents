@@ -7,9 +7,11 @@ let from = urlParams.get('from');
 if (from == "allEvents") {
     from = "index";
 }
-let evento = data.events[id];
 
-function printDetail() {
+async function printDetail() {
+    let response = await fetch("https://mindhub-xj03.onrender.com/api/amazing");
+    let data = await response.json();
+    let evento = data.events[id];
     document.getElementById('details').innerHTML = 
     `<div class="details d-flex flex-column align-items-center flex-md-row">
         <div class="detail-div-img">
