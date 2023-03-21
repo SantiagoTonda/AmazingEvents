@@ -1,7 +1,9 @@
 let table1 = document.getElementById("table1");
 let table2 = document.getElementById("table2");
 let table3 = document.getElementById("table3")
-let tableContent = "";
+let table1Content = "";
+let table2Content = "";
+let table3Content = "";
 
 async function renderTable() {
     try {
@@ -9,6 +11,11 @@ async function renderTable() {
         let data = await response.json();
         let sortedByCapacity = data.events.sort((a, b) => b.capacity - a.capacity);
         let pastData = data.events.filter(element => element.date < data.currentDate);
+        let pastCategories = pastData.map(element => element.category);
+        let setPastCategories = new Set(pastCategories);
+        let upcomingData = data.events.filter(element => element.date > data.currentDate);
+        let upcomingCategories = upcomingData.map(element => element.category);
+        let setUpcomingCategories = new Set(upcomingCategories);
         let percentageArray = []
         pastData.forEach(element => {
             let percentageItem = {
@@ -18,8 +25,7 @@ async function renderTable() {
             percentageArray.push(percentageItem);
         });
         let sortedPercentajeArray = percentageArray.sort((a, b) => b.percentage - a.percentage);
-        console.log(sortedPercentajeArray);
-        tableContent += `
+        table1Content += `
             <p class="h1 text-center">Events statistics</p>
             <table>
                 <thead>
@@ -36,27 +42,44 @@ async function renderTable() {
                         <td>${sortedByCapacity[0].name}</td>
                     </tr>
                 </tbody>
-            </table>
-            <p class="h1 text-center">Upcoming events statistics by category</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Categories</th>
-                        <th>Revenues</th>
-                        <th>Percentage of attendance</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-            `
+            </table>`
 
-        table1.innerHTML = tableContent;
+        table1.innerHTML = table1Content;
+
+        setUpcomingCategories.forEach(category => {
+            let categoryEvents = upcomingData.filter(element => category == element.category);
+            let gains = categoryEvents.map(element => element.estimate * element.price);
+            let revenue = gains.reduce((acc, gain) => acc + gain);
+            let percentage = categoryEvents.map(element => (element.estimate / element.capacity) * 100);
+            let percentageReduce = percentage.reduce((acc, percentage) => acc + percentage);
+            let percentageOfAttendance = percentageReduce / categoryEvents.length;
+            table2Content += `
+                <tr>
+                    <td>${category}</td>
+                    <td>$${revenue}</td>
+                    <td>${percentageOfAttendance.toFixed(2)}%</td>
+                </tr>`
+        })
+
+        table2.innerHTML = table2Content;
+
+        setPastCategories.forEach(category => {
+            let categoryEvents = pastData.filter(element => category == element.category);
+            let gains = categoryEvents.map(element => element.assistance * element.price);
+            let revenue = gains.reduce((acc, gain) => acc + gain);
+            let percentage = categoryEvents.map(element => (element.assistance / element.capacity) * 100);
+            let percentageReduce = percentage.reduce((acc, percentage) => acc + percentage);
+            let percentageOfAttendance = percentageReduce / categoryEvents.length;
+            table3Content += `
+                <tr>
+                    <td>${category}</td>
+                    <td>$${revenue}</td>
+                    <td>${percentageOfAttendance.toFixed(2)}%</td>
+                </tr>`
+        })
+
+        table3.innerHTML = table3Content;
+
     } catch (error) {
         console.log("error");
     }
