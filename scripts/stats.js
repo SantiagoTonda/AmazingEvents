@@ -26,23 +26,11 @@ async function renderTable() {
         });
         let sortedPercentajeArray = percentageArray.sort((a, b) => b.percentage - a.percentage);
         table1Content += `
-            <p class="h1 text-center">Events statistics</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Event with the highest percentage of attendance</th>
-                        <th>Event with the lowest percentage of attendance</th>
-                        <th>Event with larger capacity</th>
-                    </tr>
-                </thead>
-                <tbody>
                     <tr>
                         <td>${sortedPercentajeArray[0].name} (%${sortedPercentajeArray[0].percentage})</td>
                         <td>${sortedPercentajeArray[sortedPercentajeArray.length -1].name} (%${sortedPercentajeArray[sortedPercentajeArray.length -1].percentage})</td>
                         <td>${sortedByCapacity[0].name}</td>
-                    </tr>
-                </tbody>
-            </table>`
+                    </tr>`
 
         table1.innerHTML = table1Content;
 

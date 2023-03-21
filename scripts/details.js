@@ -1,5 +1,3 @@
-// Falta modificar estilos del details y el stats
-
 let queryString = location.search;
 let urlParams = new URLSearchParams(queryString);
 let id = urlParams.get('id') - 1;
