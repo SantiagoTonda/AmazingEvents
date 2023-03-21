@@ -1,22 +1,15 @@
-let pastEvents = [];
-let cardPastEvents = document.getElementById('pastEvents'); //Es necesario cambiarle el nombre a esta función???
-
-function showCards() {
-  for (let element of data.events) {
-    let card = `
-      <div class="d-flex flex-column align-items-center justify-content-between">
-        <img src= "${element.image}" alt="${element.name}."></img>
-          <p class="h3 mt-2">${element.name}</p>
-          <p>${element.description}</p>
-          <div class="d-flex align-items-center mb-3">
-            <p class="my-0 me-5">Price: $${element.price}</p>
-            <a href="./details.html" class="btn btn-outline-secondary btn-shadow ms-5">Details</a>
-          </div>
-      </div> `
-    if (element.date < data.currentDate) {
-        pastEvents.push(card);
-    }
+async function captureData() {
+  try {
+    let response = await fetch("https://mindhub-xj03.onrender.com/api/amazing");
+    let data = await response.json();
+    let text = document.getElementById("search").value
+    let checks = Array.from(document.querySelectorAll(".checks:checked")).map(element => element.defaultValue);
+    let filteredArray = data.events.filter(evento => {
+      return evento.name.toLowerCase().includes(text.toLowerCase()) && (checks.includes(evento.category) || checks.length == 0) && evento.date < data.currentDate;
+    })
+    printCards(filteredArray, "past_events");
+  } catch (error) {
+    console.log(error);
   }
-  cardPastEvents.innerHTML = pastEvents.join("");
 }
-showCards();
+captureData();
